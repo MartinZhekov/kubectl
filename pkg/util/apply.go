@@ -132,6 +132,7 @@ func CreateApplyAnnotation(obj runtime.Object, codec runtime.Encoder) error {
 	if err != nil {
 		return err
 	}
+	log.Println(modified.String())
 	return setOriginalConfiguration(obj, modified)
 }
 
